@@ -6,6 +6,7 @@
         <module>config-data</module>
         <module>vk-job-streams</module>
         <module>custom-job</module>
+        <module>black-list</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

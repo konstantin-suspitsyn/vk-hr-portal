@@ -33,8 +33,8 @@ public class CustomJob {
     private Integer moneyOfferFrom;
     @Column(name = "money_offer_to")
     private Integer moneyOfferTo;
-    @Column(name = "company")
-    private String company;
+    @Column(name = "userId")
+    private Long userId;
 
     // TODO: Сделать справочник компаний
 

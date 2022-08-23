@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/CustomJobApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/CustomJobController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/records/CustomJobRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/entity/CustomJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/entity/CustomJobRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Added Custom Job Post Request">
+      <change afterPath="$PROJECT_DIR$/black-list/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/records/CustomJobRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/records/CustomJobRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/entity/CustomJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/entity/CustomJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +60,6 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;
   }
 }</component>
@@ -76,7 +68,7 @@
       <recent name="ru.suspitsyn.work.custom.job.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CustomJobApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yml.postgres: Compose Deployment">
     <configuration name="CustomJobApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.suspitsyn.work.custom.job.CustomJobApplication" />
       <module name="custom-job" />
@@ -98,10 +90,38 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.postgres-bl: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres-bl" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CustomJobApplication" />
+        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.postgres-bl: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Application.CustomJobApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -114,6 +134,14 @@
       <option name="presentableId" value="Default" />
       <updated>1661106114369</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Custom Job Post Request">
+      <created>1661186251254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661186251254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,5 +154,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Custom Job Post Request" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Custom Job Post Request" />
   </component>
 </project>

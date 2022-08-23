@@ -6,5 +6,5 @@ public record CustomJobRecord (
     String link,
     Integer moneyOfferFrom,
     Integer moneyOfferTo,
-    String company) {
+    Long userId) {
 }

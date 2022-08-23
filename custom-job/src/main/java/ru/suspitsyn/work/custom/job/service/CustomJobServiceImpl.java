@@ -20,7 +20,7 @@ public class CustomJobServiceImpl implements CustomJobService {
     public void createCustomJob(CustomJobRecord customJobRecord) {
         CustomJob customJob = new CustomJob();
         customJob.setCity(customJobRecord.city());
-        customJob.setCompany(customJobRecord.company());
+        customJob.setUserId(customJobRecord.userId());
         customJob.setLink(customJobRecord.link());
         customJob.setVacancyText(customJobRecord.vacancyText());
         customJob.setMoneyOfferFrom(Integer.valueOf(customJobRecord.moneyOfferFrom()));
