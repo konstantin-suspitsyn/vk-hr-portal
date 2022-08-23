@@ -16,9 +16,8 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       # You can use whatever password you like
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-
     volumes:
-      - postgres:/data/postgres
+      - postgres:/data/postgres-vk
     ports:
       - "5432:5432"
     expose:
@@ -30,25 +29,23 @@ services:
   postgres-bl:
     container_name: postgres-bl
     image: postgres:14.2-bullseye
-
     build:
       context: .
     env_file: .env
     environment:
       POSTGRES_INITDB_ARGS: '--auth-host=scram-sha-256'
       POSTGRES_HOST_AUTH_METHOD: 'scram-sha-256'
-      POSTGRES_DB: 'vkwork'
+      POSTGRES_DB: 'blacklist'
       # So you don't have to use root, but you can if you like
       POSTGRES_USER: ${POSTGRES_USER}
       # You can use whatever password you like
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-
     volumes:
-      - postgres-bl:/data/postgres-bl
+      - postgres-bl:/data/postgres-black
     ports:
-      - "15432:15432"
+      - "5433:5432"
     expose:
-      - '15432'
+      - '5433'
     networks:
       - postgres-bl
     restart: unless-stopped
