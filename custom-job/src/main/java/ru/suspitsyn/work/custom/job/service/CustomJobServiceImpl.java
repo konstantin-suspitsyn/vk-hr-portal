@@ -3,11 +3,12 @@ package ru.suspitsyn.work.custom.job.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import ru.suspitsyn.work.black.list.BlackListIsBlocked;
 import ru.suspitsyn.work.custom.job.config.CustomJobConfig;
 import ru.suspitsyn.work.custom.job.controller.records.CustomJobRecord;
 import ru.suspitsyn.work.custom.job.entity.CustomJob;
 import ru.suspitsyn.work.custom.job.entity.CustomJobRepository;
+import ru.suspitsyn.work.feign.black.list.BlackListClient;
+import ru.suspitsyn.work.feign.black.list.BlackListIsBlocked;
 
 @Service
 public class CustomJobServiceImpl implements CustomJobService {
@@ -16,6 +17,8 @@ public class CustomJobServiceImpl implements CustomJobService {
     private CustomJobRepository customJobRepository;
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private BlackListClient blackListClient;
     public CustomJob saveCustomJob(CustomJob customJob) {
         return customJobRepository.save(customJob);
     }
@@ -32,11 +35,8 @@ public class CustomJobServiceImpl implements CustomJobService {
         customJob.setMoneyOfferTo(Integer.valueOf(customJobRecord.getMoneyOfferTo()));
         customJob = saveCustomJob(customJob);
 
-        BlackListIsBlocked blackListIsBlocked = restTemplate.getForObject(
-                "http://localhost:8081/api/v1/black-list/is_blocked?userId={userId}",
-                BlackListIsBlocked.class,
-                customJob.getUserId()
-        );
+
+         BlackListIsBlocked blackListIsBlocked = blackListClient.checkInBlackList(customJob.getUserId());
 
         if(blackListIsBlocked.isBlocked()==true) {
             //TODO: send to message Queue or not

@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Added BlackList microservice">
-      <change afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListIsBlocked.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/config/CustomJobConfig.java" afterDir="false" />
+    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Added Communication among services">
+      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/ru/suspitsyn/work/eureka/server/EurekaServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-client/src/main/java/ru/suspitsyn/work/feign/black/list/BlackListClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/black-list/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/service/BlackListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/service/BlackListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListIsBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/feign-client/src/main/java/ru/suspitsyn/work/feign/black/list/BlackListIsBlocked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/black-list/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-job/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/records/CustomJobRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/records/CustomJobRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/CustomJobApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/CustomJobApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/config/CustomJobConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/config/CustomJobConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-job/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -24,9 +32,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -70,8 +78,11 @@
       <recent name="ru.suspitsyn.work.black.list.service" />
       <recent name="ru.suspitsyn.work.custom.job.service" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.suspitsyn.work.feign.black.list" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.BlackListApplication">
+  <component name="RunManager" selected="Application.CustomJobApplication">
     <configuration name="BlackListApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.suspitsyn.work.black.list.BlackListApplication" />
       <module name="black-list" />
@@ -98,13 +109,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
+    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.suspitsyn.work.eureka.server.EurekaServerApplication" />
+      <module name="eureka-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.suspitsyn.work.eureka.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="docker-compose.yml.postgres-bl: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
@@ -134,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BlackListApplication" />
         <item itemvalue="Application.CustomJobApplication" />
+        <item itemvalue="Application.BlackListApplication" />
+        <item itemvalue="Application.EurekaServerApplication" />
         <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.postgres-bl: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661276270456</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Communication among services">
+      <created>1661322828978</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661322828978</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +213,7 @@
     <MESSAGE value="Added Custom Job Post Request" />
     <MESSAGE value="Added User to Custom Job" />
     <MESSAGE value="Added BlackList microservice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added BlackList microservice" />
+    <MESSAGE value="Added Communication among services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Communication among services" />
   </component>
 </project>

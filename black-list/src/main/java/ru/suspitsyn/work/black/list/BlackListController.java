@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.suspitsyn.work.black.list.entity.BlackList;
 import ru.suspitsyn.work.black.list.service.BlackListService;
+import ru.suspitsyn.work.feign.black.list.BlackListIsBlocked;
 
 @RestController
 @RequestMapping("api/v1/black-list")

@@ -1,4 +1,4 @@
-package ru.suspitsyn.work.black.list;
+package ru.suspitsyn.work.feign.black.list;
 
 public record BlackListIsBlocked(Boolean isBlocked) {
 }
