@@ -16,9 +16,9 @@ public class BlackListController {
     BlackListService blackListService;
 
     @GetMapping("/is_blocked")
-    public boolean checkInBlackList(@RequestParam Long userId) {
+    public BlackListIsBlocked checkInBlackList(@RequestParam Long userId) {
         BlackList blackList = blackListService.createBlackListEntityIfNotExists(userId);
-        return blackList.getIsBlocked();
+        return new BlackListIsBlocked(blackList.getIsBlocked());
     }
 
 }

@@ -24,6 +24,7 @@ public class BlackListServiceImpl implements BlackListService {
             blackList.setDislike(0L);
             blackList.setLike(0L);
             blackList.setUserId(userId);
+            blackList.setIsBlocked(false);
             blackList = blackListRepository.save(blackList);
         } else {
             blackList = blackListRepository.findByUserId(userId).get();

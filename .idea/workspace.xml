@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Added User to Custom Job">
-      <change afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/config/BlackListConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/entity/BlackList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/entity/BlackListRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/service/BlackListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/service/BlackListServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/black-list/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Added BlackList microservice">
+      <change afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListIsBlocked.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/config/CustomJobConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/black-list/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/service/BlackListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/service/BlackListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/records/CustomJobRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/records/CustomJobRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -137,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BlackListApplication" />
+        <item itemvalue="Application.CustomJobApplication" />
         <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.postgres-bl: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Application.CustomJobApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661233905248</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added BlackList microservice">
+      <created>1661276270456</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661276270456</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +189,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Custom Job Post Request" />
     <MESSAGE value="Added User to Custom Job" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added User to Custom Job" />
+    <MESSAGE value="Added BlackList microservice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added BlackList microservice" />
   </component>
 </project>
