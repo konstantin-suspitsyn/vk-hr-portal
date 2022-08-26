@@ -21,6 +21,7 @@ public class CustomJobController {
 
     @PostMapping
     public void createCustomJob(@RequestBody CustomJobRecord customJobRecord) {
+        log.info("Создана новая работа");
         customJobService.createCustomJob(customJobRecord);
     }
 

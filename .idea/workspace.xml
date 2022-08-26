@@ -4,24 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Added Communication among services">
-      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/ru/suspitsyn/work/eureka/server/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feign-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feign-client/src/main/java/ru/suspitsyn/work/feign/black/list/BlackListClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Added Communication Using Feign">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/black-list/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/black-list/src/main/java/ru/suspitsyn/work/black/list/BlackListIsBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/feign-client/src/main/java/ru/suspitsyn/work/feign/black/list/BlackListIsBlocked.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/black-list/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-job/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/CustomJobApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/CustomJobApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/config/CustomJobConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/config/CustomJobConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/service/CustomJobServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/CustomJobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/CustomJobController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-job/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feign-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feign-client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,13 +60,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.suspitsyn.work.black.list.service" />
@@ -195,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661322828978</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Communication Using Feign">
+      <created>1661361983786</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661361983786</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +218,7 @@
     <MESSAGE value="Added User to Custom Job" />
     <MESSAGE value="Added BlackList microservice" />
     <MESSAGE value="Added Communication among services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Communication among services" />
+    <MESSAGE value="Added Communication Using Feign" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Communication Using Feign" />
   </component>
 </project>
