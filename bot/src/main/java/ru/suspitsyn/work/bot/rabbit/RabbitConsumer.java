@@ -4,7 +4,8 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.suspitsyn.work.bot.BotService;
-import ru.suspitsyn.work.bot.CustomJobRecord;
+import ru.suspitsyn.work.custom.job.controller.records.CustomJobRecord;
+import ru.suspitsyn.work.custom.job.entity.CustomJob;
 import ru.suspitsyn.work.rabbit.RabbitConfigurationWorkTopic;
 
 @Component
@@ -23,7 +24,7 @@ public class RabbitConsumer {
     }
 
     @RabbitListener(queues = "${rabbitmq.exchanges.queue.notification}")
-    public void consume(CustomJobRecord customJobRecord) {
+    public void consume(CustomJob customJobRecord) {
         botService.send(customJobRecord);
     }
 
