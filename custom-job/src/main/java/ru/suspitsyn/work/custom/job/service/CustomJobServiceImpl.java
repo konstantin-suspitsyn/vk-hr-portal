@@ -9,6 +9,8 @@ import ru.suspitsyn.work.custom.job.entity.CustomJob;
 import ru.suspitsyn.work.custom.job.entity.CustomJobRepository;
 import ru.suspitsyn.work.feign.black.list.BlackListClient;
 import ru.suspitsyn.work.feign.black.list.BlackListIsBlocked;
+import ru.suspitsyn.work.rabbit.RabbitConfigurationWorkTopic;
+import ru.suspitsyn.work.rabbit.RabbitMessageProducer;
 
 @Service
 public class CustomJobServiceImpl implements CustomJobService {
@@ -19,6 +21,14 @@ public class CustomJobServiceImpl implements CustomJobService {
     private RestTemplate restTemplate;
     @Autowired
     private BlackListClient blackListClient;
+
+    @Autowired
+    private RabbitMessageProducer rabbitMessageProducer;
+
+    @Autowired
+    private RabbitConfigurationWorkTopic rabbitConfigurationWorkTopic;
+
+
     public CustomJob saveCustomJob(CustomJob customJob) {
         return customJobRepository.save(customJob);
     }
@@ -38,8 +48,11 @@ public class CustomJobServiceImpl implements CustomJobService {
 
          BlackListIsBlocked blackListIsBlocked = blackListClient.checkInBlackList(customJob.getUserId());
 
-        if(blackListIsBlocked.isBlocked()==true) {
-            //TODO: send to message Queue or not
+        if(blackListIsBlocked.isBlocked()==false) {
+
+            rabbitMessageProducer.send(customJob,
+                    rabbitConfigurationWorkTopic.getInternalExchange(),
+                    rabbitConfigurationWorkTopic.getInternalNotificationRoutingKey());
         }
 
     }
