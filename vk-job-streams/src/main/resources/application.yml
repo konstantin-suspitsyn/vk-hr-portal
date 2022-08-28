@@ -1,0 +1,20 @@
+server:
+  port: 80834
+spring:
+  application:
+    name: vk
+  jpa:
+    rabbitmq:
+      address:localhost:5672:
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    registry-with-eureka: true
+
+search:
+  search-words:
+    - работа
+    - подработка

@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Added Zipkin">
+    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/config/src/main/java/ru/suspitsyn/work/rabbit/RabbitConfigurationVKTopic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/VkApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/VkConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/VkStreamRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/rabbit/WorkFromVk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/BotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/CustomJobRecord.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/rabbit/RabbitConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/rabbit/RabbitConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/records/CustomJobRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/src/main/java/ru/suspitsyn/work/custom/job/controller/records/CustomJobRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-job/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-job-streams/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vk-job-streams/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -60,7 +69,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/const/working/work_hunt_from_vk/config/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/const/working/work_hunt_from_vk/vk-job-streams/src/main/resources&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
@@ -68,18 +77,20 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.suspitsyn.work.vk" />
       <recent name="ru.suspitsyn.work.black.list.service" />
       <recent name="ru.suspitsyn.work.custom.job.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\const\working\work_hunt_from_vk\vk-job-streams\src\main\resources" />
       <recent name="C:\Users\const\working\work_hunt_from_vk\config\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.suspitsyn.work.rabbit" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.suspitsyn.work.bot" />
       <recent name="ru.suspitsyn.work.rabbit" />
+      <recent name="ru.suspitsyn.work.bot" />
       <recent name="ru.suspitsyn.work.feign.black.list" />
     </key>
   </component>
@@ -136,26 +147,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="postgres" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
+    <configuration name="VkApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.suspitsyn.work.vk.VkApplication" />
+      <module name="vk-job-streams" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.suspitsyn.work.vk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BotApplication" />
         <item itemvalue="Application.CustomJobApplication" />
         <item itemvalue="Application.BlackListApplication" />
+        <item itemvalue="Application.VkApplication" />
         <item itemvalue="Application.EurekaServerApplication" />
-        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661527258050</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactoring">
+      <created>1661621168837</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661621168837</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,6 +249,28 @@
     <MESSAGE value="Added Communication among services" />
     <MESSAGE value="Added Communication Using Feign" />
     <MESSAGE value="Added Zipkin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Zipkin" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/VkStreamRunner.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/VkApplication.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/VkStreamRunner.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
