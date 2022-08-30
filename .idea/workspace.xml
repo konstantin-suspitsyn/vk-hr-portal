@@ -4,21 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Refactoring">
-      <change afterPath="$PROJECT_DIR$/config/src/main/java/ru/suspitsyn/work/rabbit/RabbitConfigurationVKTopic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/VkApplication.java" afterDir="false" />
+    <list default="true" id="b285be9f-4072-42c5-88bf-dc4e73a002fb" name="Changes" comment="Added Schema">
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/rabbit/record/CustomJobRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/rabbit/record/VkWorkRecord.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/VkConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/VkStreamRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/java/ru/suspitsyn/work/vk/rabbit/WorkFromVk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vk-job-streams/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/black-list/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/black-list/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/BotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/BotApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/BotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/BotService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/rabbit/RabbitConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/ru/suspitsyn/work/bot/rabbit/RabbitConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-job/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/custom-job/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feign-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feign-client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vk-job-streams/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vk-job-streams/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,17 +65,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/const/working/work_hunt_from_vk/vk-job-streams/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/const/working/work_hunt_from_vk/vk-job-streams/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.suspitsyn.work.vk" />
@@ -163,9 +165,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BotApplication" />
+        <item itemvalue="Application.VkApplication" />
         <item itemvalue="Application.CustomJobApplication" />
         <item itemvalue="Application.BlackListApplication" />
-        <item itemvalue="Application.VkApplication" />
         <item itemvalue="Application.EurekaServerApplication" />
       </list>
     </recent_temporary>
@@ -228,7 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661621168837</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added VkStreamApi">
+      <created>1661669693471</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661669693472</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added Schema">
+      <created>1661672546619</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661672546619</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +266,9 @@
     <MESSAGE value="Added Communication Using Feign" />
     <MESSAGE value="Added Zipkin" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Added VkStreamApi" />
+    <MESSAGE value="Added Schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Schema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
